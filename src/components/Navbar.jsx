@@ -49,7 +49,7 @@ const Navbar = () => {
   return (
     <AppBar position="sticky">
       <StyledToolbar>
-        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+        <Typography  variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
           Sosical
         </Typography>
         <SpaIcon sx={{ display: { xs: "block", sm: "none" } }} />
@@ -70,7 +70,7 @@ const Navbar = () => {
             onClick={(e) => setOpen(true)}
           />
         </Icons>
-        <UserBox onClick={(e) => setOpen(true)}>
+        <UserBox>
           <Avatar
             sx={{ width: 30, height: 30 }}
             alt="Travis Howard"
