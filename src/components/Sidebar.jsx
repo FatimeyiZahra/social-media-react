@@ -8,7 +8,7 @@ import {
   ListItemText,
   Switch,
 } from "@mui/material";
-import HomeIcon from '@mui/icons-material/Home';
+import HomeIcon from "@mui/icons-material/Home";
 import {
   AccountBox,
   Article,
@@ -18,19 +18,20 @@ import {
   Settings,
   Storefront,
 } from "@mui/icons-material";
-const Sidebar = ({mode,setMode}) => {
+const Sidebar = ({ mode, setMode }) => {
   return (
     <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
-      <List>
-        <ListItem disablePadding>
-          <ListItemButton component="a" href="#home">
-            <ListItemIcon>
-              <HomeIcon />
-            </ListItemIcon>
-            <ListItemText primary="Home" />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
+      <Box position="fixed">
+        <List>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#home">
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
+              <ListItemText primary="Home" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
             <ListItemButton component="a" href="#simple-list">
               <ListItemIcon>
                 <Article />
@@ -83,10 +84,13 @@ const Sidebar = ({mode,setMode}) => {
               <ListItemIcon>
                 <ModeNight />
               </ListItemIcon>
-              <Switch onChange={e=>setMode(mode === "light" ? "dark" : "light")}/>
+              <Switch
+                onChange={(e) => setMode(mode === "light" ? "dark" : "light")}
+              />
             </ListItemButton>
           </ListItem>
-      </List>
+        </List>
+      </Box>
     </Box>
   );
 };
